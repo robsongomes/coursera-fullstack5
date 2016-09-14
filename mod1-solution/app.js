@@ -10,8 +10,7 @@ function LunchCheckController($scope) {
     //I'm considering empty as an item
     if ($scope.dishes === '') {
       $scope.message = 'Please enter data first';
-    }
-    if ($scope.dishes.split(',').length <= 3) {
+    } else if ($scope.dishes.split(',').length <= 3) {
       $scope.message = "Enjoy!";
     } else {
       $scope.message = "Too much!";
